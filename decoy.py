@@ -7,6 +7,6 @@ with open(output, 'w') as s:
         for record in SeqIO.parse(r, "fasta"):
             SeqIO.write(record, s, 'fasta')
             record.seq=record.seq[::-1]
-            record.id=record.id+"_REVERSED"
-            record.description=record.id
+            #record.id=record.id+"_REVERSED"
+            record.description=record.description+"_REVERSED"
             SeqIO.write(record, s, 'fasta')
